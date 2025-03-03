@@ -1,0 +1,16 @@
+let result1 = "javascript" + 5;
+// ket qua = javascript5 : vì chuỗi + số sẽ kết hợp cả 2 vào làm 1 chuỗi
+let result2 = "javascript" - 1;
+// ket qua = NaN : vì chuỗi không phải là số lại trừ đi 1 nên nó trả về kết quả là không phải là số
+let result3 = "3" + 2;
+// ket qua = 32 : vì chuỗi + số sẽ kết hợp cả 2 vào làm 1 chuỗi
+let result4 = "5" - 4;
+// ket qua = 1 : vì chuỗi là 1 số - 1 số thì sẽ trừ như 1 biểu thức bình thường
+let result5 =  isNaN( "123");
+// ket qua = false : isNaN là kiểm tra xem nó có phải chữ hay không, vì chuỗi ở đây là số nên trả về kết quả là false
+let result6 = isNaN("hello");
+// ket qua = true : isNaN là kiểm tra xem nó có phải chữ hay không, vì chuỗi ở đây là chữ nên trả về kết quả là true
+let result7 = Number.isNaN("123");
+// ket qua = false : "123" là 1 chuỗi và hàm Number.isNaN chỉ trả về kết quả là true nếu như giá trị truyền vào là NaN
+let result8 = Number.isNaN(NaN);
+// ket qua = true : hàm Number.isNaN chỉ trả về kết quả là true nếu như giá trị truyền vào là NaN, giá trị truyền vào ở đây là NaN nên là true
