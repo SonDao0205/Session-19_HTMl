@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numA = +prompt("Nhap so a") 
+        let numB = +prompt("Nhap so b")
+        let numC = +prompt("Nhap so c")
+        let numD = +prompt("Nhap so d")
+        if (numA == 0) {
+            if(numB == 0){
+                if (numC == 0) {
+                    if (numD == 0) {
+                        document.write(`Phuong trinh vo so nghiem`)
+                    }
+                    else{
+                        document.write(`Phuong trinh vo nghiem`)
+                    }
+                }
+                else{
+                    document.write(`Phuong trinh co 1 nghiem : x = ${-numD/numC}`)
+                }
+                }
+                else{
+                    let delta = Math.pow(numC,2) - 4 * numB * numD;
+                    if(delta < 0){
+                        document.write("Phuong trinh vo nghiem!");
+                    }
+                    else if(delta == 0){
+                        document.write(`Phuong trinh co nghiem kep : x1 = x2 = x = ${-numC / (2*numB)}`)
+                    }
+                    else{
+                        let x1 = (-numC + Math.sqrt(delta))/(2*numB)
+                        let x2 = (-numC - Math.sqrt(delta))/(2*numB)
+                        document.write(`Phuong trinh co 2 nghiem phan biet : 
+                            x1 = ${x1}<br>
+                            x2 = ${x2}<br>
+                        `);
+                    }
+            }
+        }
+        else{
+            let delta = 18 * numA * numB * numC * numD - 4 * Math.pow(numB,3) * numD + Math.pow(numB,2) * Math.pow(numC,2) - 4 * numA * Math.pow(numC,3) - 27 * Math.pow(numA,2) * Math.pow(numD,2)
+            let Q = ((3 * numA * numC) - Math.pow(numB,2))/(9*Math.pow(numA,2))
+            let R = ((9*numA*numB*numC)-(27*Math.pow(numA,2)*numD) - (2*Math.pow(numB,3)))/(54*Math.pow(numA,3))
+            let D = Math.pow(Q,3) + Math.pow(R,2)
+            if (delta > 0) {
+                let theta =Math.acos(((R)/(Math.sqrt(-Math.pow(Q,3)))))
+                let k = 1;
+                let x1 = 2*Math.sqrt(-Q)*Math.cos((theta + 2*k*Math.PI)/3) - ((numB)/3*numA)
+                k = 2;
+                let x2 = 2*Math.sqrt(-Q)*Math.cos((theta + 2*k*Math.PI)/3) - ((numB)/3*numA)
+                k = 3;
+                let x3 = 2*Math.sqrt(-Q)*Math.cos((theta + 2*k*Math.PI)/3) - ((numB)/3*numA)
+            }
+            else if (delta == 0) {
+                
+            }
+            else{
+
+            }
+        }
+        
+    </script>
+</body>
+</html>
